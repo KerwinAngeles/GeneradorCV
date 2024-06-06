@@ -57,7 +57,12 @@ const btnAddMoreCertification = document.querySelector("#more-certification");
 const col = document.querySelector("#row-container");
 const colInfo = document.querySelector("#col-info");
 const colCV = document.querySelector("#col-cv");
-const rowContainerSkill = document.querySelector("#row-container-skill")
+const rowContainerSkill = document.querySelector("#row-container-skill");
+const rowContainerSoftware = document.querySelector("#row-container-software");
+const rowContainerLanguage = document.querySelector("#row-container-language");
+const rowExperience = document.querySelector("#row-experience");
+const rowEducation = document.querySelector("#row-education");
+const rowCertification = document.querySelector("#row-certification");
 
 // validate inputs
 
@@ -81,28 +86,28 @@ function InputValidate(input, isValid){
 
 function Validate(){
     let isValid = true;
-    // isValid = InputValidate(inputName, isValid);
-    // isValid = InputValidate(inputTitle, isValid);
-    // isValid = InputValidate(inputEmail, isValid);
-    // isValid = InputValidate(inputPhone, isValid);
-    // isValid = InputValidate(inputBirthDate, isValid);
-    // isValid = InputValidate(inputLinkedin, isValid);
-    // isValid = InputValidate(inputNameSkill, isValid);
-    // isValid = InputValidate(inputPunctuationSkill, isValid);
-    // isValid = InputValidate(inputNameSoftware, isValid);
-    // isValid = InputValidate(inputPunctuationSoftware, isValid);
-    // isValid = InputValidate(inputNameLanguage, isValid);
-    // isValid = InputValidate(inputPunctuationLanguage, isValid);
-    // isValid = InputValidate(inputSummary, isValid);
-    // isValid = InputValidate(inputJobName, isValid);
-    // isValid = InputValidate(inputStartDateJob, isValid);
-    // isValid = InputValidate(inputFinishDateJob, isValid);
-    // isValid = InputValidate(inputEducationName, isValid);
-    // isValid = InputValidate(inputStartDateEducation, isValid);
-    // isValid = InputValidate(inputFinishDateEducation, isValid);
-    // isValid = InputValidate(inputCertificationName, isValid);
-    // isValid = InputValidate(inputStartDateProgram, isValid);
-    // isValid = InputValidate(inputFinishDateProgram, isValid);
+    isValid = InputValidate(inputName, isValid);
+    isValid = InputValidate(inputTitle, isValid);
+    isValid = InputValidate(inputEmail, isValid);
+    isValid = InputValidate(inputPhone, isValid);
+    isValid = InputValidate(inputBirthDate, isValid);
+    isValid = InputValidate(inputLinkedin, isValid);
+    isValid = InputValidate(inputNameSkill, isValid);
+    isValid = InputValidate(inputPunctuationSkill, isValid);
+    isValid = InputValidate(inputNameSoftware, isValid);
+    isValid = InputValidate(inputPunctuationSoftware, isValid);
+    isValid = InputValidate(inputNameLanguage, isValid);
+    isValid = InputValidate(inputPunctuationLanguage, isValid);
+    isValid = InputValidate(inputSummary, isValid);
+    isValid = InputValidate(inputJobName, isValid);
+    isValid = InputValidate(inputStartDateJob, isValid);
+    isValid = InputValidate(inputFinishDateJob, isValid);
+    isValid = InputValidate(inputEducationName, isValid);
+    isValid = InputValidate(inputStartDateEducation, isValid);
+    isValid = InputValidate(inputFinishDateEducation, isValid);
+    isValid = InputValidate(inputCertificationName, isValid);
+    isValid = InputValidate(inputStartDateProgram, isValid);
+    isValid = InputValidate(inputFinishDateProgram, isValid);
 
      return isValid;
 }
@@ -127,15 +132,32 @@ btnSendInformation.addEventListener('click', () => {
     const existingCards = col.querySelectorAll(".card");
     existingCards.forEach(card => card.remove());
     CV();
-    ClearInputs();
+    ClearAllInputs();
     Clear();
 })
 
-function ClearInputs() {
-    while (rowContainerSkill.children.length > 2) {
-        rowContainerSkill.removeChild(rowContainerSkill.children[1]);
+function ClearAllInputs(){
+    ClearInputs(rowContainerSkill);
+    ClearInputs(rowContainerLanguage);
+    ClearInputs(rowContainerSoftware);
+    ClearThreeInputs(rowExperience);
+    ClearThreeInputs(rowCertification);
+    ClearThreeInputs(rowEducation);
+
+}
+
+function ClearInputs(value) {
+    while (value.children.length > 2) {
+        value.removeChild(value.children[2]);
     }
 }
+
+function ClearThreeInputs(value){
+    while (value.children.length > 3) {
+        value.removeChild(value.children[3]);
+    }
+}
+
 
 function CV(){
 
@@ -456,9 +478,6 @@ function Generator(id, idPunctuation, text) {
     
     const rowContainer = document.querySelector("#row-container");
     const container = document.querySelector("#container");
-
-    // const existingCards = rowContainer.querySelectorAll(".card");
-    // existingCards.forEach(card => card.remove());
 
     const infoContainer = document.querySelector("#col-info");
   
