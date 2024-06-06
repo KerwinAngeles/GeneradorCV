@@ -32,3 +32,10 @@ li{
 .info{
     background: #dee2e6;
 }
+
+.message-error{
+    border: 3px solid #DC3545;
+}
+.message-success{
+    border: 3px solid #28A745;
+}

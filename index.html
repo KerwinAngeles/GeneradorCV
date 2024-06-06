@@ -16,6 +16,7 @@
     </header> -->
     <main>
         <div class="container col-12 col-sm-12 col-md-10 mb-5 mt-5">
+          
             <div class="personal-information">
                 <h4>Personal Information</h4>
                 <div class="mb-3">
@@ -45,32 +46,31 @@
             </div>
             <div class="skill">
                 <h4>Skills</h4>
-                <div class="row">
+                <div class="row" id="row-container-skill">
                     <div class="mb-3 col-6">
                         <input type="text"class="form-control form-control-sm" id="skill-name" placeholder="Enter a skill">
                     </div>
                     <div class="mb-3 col-6">
-                        <select class="form-select form-select-sm" id="punctuation">
-                            <option value="">Select your punctuation skill</option>
+                        <select class="form-select form-select-sm" id="punctuation-skill">
+                            <option value="">Select your skill punctuation</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-    
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3 btn-sm">Add more skills</button>
+                <button class="btn btn-primary mb-3 btn-sm" id="more-skill">Add more skills</button>
             </div>
             <div class="software">
                 <h4>Software</h4>
-                <div class="row">
+                <div class="row" id="row-container-software">
                     <div class="mb-3 col-6">
                         <input type="text"class="form-control form-control-sm" id="software-name" placeholder="Enter a software name">
                     </div>
                     <div class="mb-3 col-6">
-                        <select class="form-select form-select-sm" id="software-puntuaction">
+                        <select class="form-select form-select-sm" id="software-punctuation">
                             <option value="">Select your software punctuation</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -80,16 +80,16 @@
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3 btn-sm" >Add more software</button>
+                <button class="btn btn-primary mb-3 btn-sm" id="more-software" >Add more software</button>
             </div>
             <div class="language">
                 <h4>Language</h4>
-                <div class="row">
+                <div class="row" id="row-container-language">
                     <div class="mb-3 col-6">
                         <input type="text"class="form-control form-control-sm" id="language" placeholder="Enter a language">
                     </div>
                     <div class="mb-3 col-6">
-                        <select class="form-select form-select-sm" id="language-puntuaction">
+                        <select class="form-select form-select-sm" id="language-punctuation">
                             <option value="">Select your language punctuation</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -99,7 +99,7 @@
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3 btn-sm">Add more language</button>
+                <button class="btn btn-primary mb-3 btn-sm" id="more-language">Add more language</button>
             </div>
             <div class="summary">
                 <h4>Summary</h4>
@@ -109,24 +109,24 @@
             </div>
             <div class="job-experience">
                 <h4>Job Experience</h4>
-                <div class="row">
+                <div class="row" id="row-experience">
                     <div class="mb-3 col-4">
-                        <input type="text"class="form-control form-control-sm" id="name" placeholder="Company name">
+                        <input type="text"class="form-control form-control-sm" id="job-name" placeholder="Job">
                     </div>
                     <div class="mb-3 col-4">
-                        <input type="date" class="form-control form-control-sm" id="start-date" placeholder="Start date">
+                        <input type="date" class="form-control form-control-sm" id="start-date-job" placeholder="Start date">
                     </div>
                     <div class="mb-3 col-4">
-                        <input type="date" class="form-control form-control-sm" id="finish-date" placeholder="Finish-date">
+                        <input type="date" class="form-control form-control-sm" id="finish-date-job" placeholder="Finish-date">
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3 btn-sm">Add more job experience</button>
+                <button class="btn btn-primary mb-3 btn-sm" id="more-experience">Add more job experience</button>
             </div>
             <div class="education">
                 <h4>Education</h4>
-                <div class="row">
+                <div class="row" id="row-education">
                     <div class="mb-3 col-4">
-                        <input type="text"class="form-control form-control-sm" id="education" placeholder="Education">
+                        <input type="text"class="form-control form-control-sm" id="education-name" placeholder="Education">
                     </div>
                     <div class="mb-3 col-4">
                         <input type="date" class="form-control form-control-sm" id="start-date-education" placeholder="Start date">
@@ -135,13 +135,13 @@
                         <input type="date" class="form-control form-control-sm" id="finish-date-education" placeholder="Finish-date">
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3 btn-sm">Add more education</button>
+                <button class="btn btn-primary mb-3 btn-sm" id="more-education">Add more education</button>
             </div>
             <div class="certification">
                 <h4>Certification</h4>
-                <div class="row">
+                <div class="row" id="row-certification">
                     <div class="mb-3 col-4">
-                        <input type="text"class="form-control form-control-sm" id="certification" placeholder="Certification">
+                        <input type="text"class="form-control form-control-sm" id="certification-name" placeholder="Certification">
                     </div>
                     <div class="mb-3 col-4">
                         <input type="date" class="form-control form-control-sm" id="start-date-program" placeholder="Start date">
@@ -150,115 +150,22 @@
                         <input type="date" class="form-control form-control-sm" id="finish-date-program" placeholder="Finish-date">
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3 btn-sm">Add more certification</button>
+                <button class="btn btn-primary mb-3 btn-sm" id="more-certification">Add more certification</button>
             </div>
             <div class="border"></div>
-            <button class="btn btn-secondary btn-sm mb-3">Send Information</button>
+            <button class="btn btn-secondary btn-sm mb-3 " id="send">Send Information</button>
         </div>
-        <div class="cv container col-12 col-sm-12 col-md-10  mb-5 mt-5">
-            <div class="row">
-                <div class="col-4 info">
-                    <div class="credential">
-                        <h3>Kerwin Angeles</h3>
-                        <h4>FullStack Developer</h4>
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Personal Information</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1">Email: kerwinangeles12@gmail.com</li>
-                                <li class="list-group-item mb-1">Phone: 809-864-2427</li>
-                                <li class="list-group-item mb-1">BirthDate: 01-12-2003</li>
-                                <li class="list-group-item mb-1">Linkedin: linkedin.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Skills</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1">Solved Problem: (5/5)</li>
-                                <li class="list-group-item mb-1">Team Working: (5/5)</li>
-                                <li class="list-group-item mb-1">Responsible: (5/5)</li>
-                                <li class="list-group-item mb-1">Tidy: (5/5)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Software</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1">JavaScript: (5/5)</li>
-                                <li class="list-group-item mb-1">C#: (5/5)</li>
-                                <li class="list-group-item mb-1">Python: (5/5)</li>
-                                <li class="list-group-item mb-1">SQL: (5/5)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Language</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1">English: (5/5)</li>
-                                <li class="list-group-item mb-1">Spanish: (5/5)</li>
-                                <li class="list-group-item mb-1">French: (4/5)</li>
-                                <li class="list-group-item mb-1">Italy: (3/5)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Job Summary</h6>
-                        </div>
-                        <div class="card-body">
-                            <p>"Profesional con más de 10 años de experiencia en gestión de proyectos en el sector tecnológico. Experto en liderazgo de equipos multidisciplinarios, con habilidades demostradas en planificación estratégica, gestión de recursos y cumplimiento de objetivos.</p>
-                        </div> 
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Job Experience</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1">GBC: 08-05-2024 - 08-06-2024</li>
-                                <li class="list-group-item mb-1">Grupo Ramo:  08-07-2014 - 08-03-2018</li>
-                            </ul>
-                        </div> 
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Education</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1">Liceo Educacion para Pensar: 08-21-2021 - 08-19-2014</li>
-                                <li class="list-group-item mb-1">ITLA: 05-11-2022 - present</li>
-                            </ul>
-                        </div> 
-                    </div>
-                    <div class="card m-3">
-                        <div class="card-header bg-primary text-white">
-                            <h6 class="d-flex justify-content-center">Certification</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-gropu-flush">
-                                <li class="list-group-item mb-1"> Especialista en Desarrollo de Software: 08-07-2014 - 08-03-2018</li>
-                                <li class="list-group-item mb-1">Analista de Sistemas: 08-01-2010 - 08-06-2014</li>
-                            </ul>
-                        </div> 
-                    </div>
+        <div class="cv container col-12 col-sm-12 col-md-10  mb-5 mt-5" id="container">
+            <div class="row" id="row-container">
+                <div class="col-8 info" id="col-cv">
+                    
+                </div> 
+                <div class="col-4 info" id="col-info">
+
                 </div>
             </div>
+               
+        </div>
     </main>
     <script src="/assets/js/lib/boostrap/bootstrap.min.js"></script>
     <script src="/assets/js/site/index/index.js"></script>
