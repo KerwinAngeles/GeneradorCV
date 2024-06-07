@@ -109,7 +109,7 @@ function Validate(){
     isValid = InputValidate(inputStartDateProgram, isValid);
     isValid = InputValidate(inputFinishDateProgram, isValid);
 
-     return isValid;
+    return isValid;
 }
 
 function Clear(){
@@ -131,6 +131,8 @@ btnSendInformation.addEventListener('click', () => {
     Validate();
     const existingCards = col.querySelectorAll(".card");
     existingCards.forEach(card => card.remove());
+    const existingCard = col.querySelectorAll(".credential");
+    existingCard.forEach(card => card.remove());
     CV();
     ClearAllInputs();
     Clear();
@@ -210,9 +212,6 @@ function GeneratePersonalInformation(){
         const rowContainer = document.querySelector("#row-container");
         const container = document.querySelector("#container");
 
-        // const existingCards = rowContainer.querySelectorAll(".card");
-        // existingCards.forEach(card => card.remove());
-
         const divCredential = document.createElement("div");
         divCredential.setAttribute("class", "credential");
 
@@ -245,7 +244,6 @@ function GeneratePersonalInformation(){
         const liBirthDate = document.createElement("li");
         const liLinkedin = document.createElement("li");
 
-
         liName.setAttribute("class", "list-group-item mb-1");
         liName.textContent = `Name: ${valueName}`;
 
@@ -276,7 +274,6 @@ function GeneratePersonalInformation(){
         ulInformation.appendChild(liEmail);
         ulInformation.appendChild(liBirthDate);
         ulInformation.appendChild(liLinkedin);
-
         divCard.appendChild(divCardHeader);
         divCard.appendChild(divCardBody);
       
